@@ -213,7 +213,7 @@ function quiz(el,Qs,done){let i=0;(function show(){const q=Qs[i],o=shuf(q.o);
   else{b.classList.add("wrong");fb.className="fb b";fb.innerHTML="✖ "+x.e}}})()}
 
 /* ---------- intro ---------- */
-const LOG=["[ANTENNA] Il segnale dell’archivio arriva fin quassù.","[ELIA] Per riprenderlo devi collegarti alla rete dell’osservatorio.","[ELIA] Attenzione: qualcuno ha acceso reti che non sono mie.","[SISTEMA] Quattro tappe: la rete, il sito, il tunnel, lo zaino."];
+const LOG=["[ANTENNA] Il segnale dell’archivio arriva fin quassù.","[SISTEMA] Per riprenderlo devi collegarti alla rete dell’osservatorio.","[SISTEMA] Attenzione: qualcuno ha acceso reti che non sono dell'ossrvatorio.","[SISTEMA] Quattro tappe: la rete, il sito, il tunnel, lo zaino."];
 let li=0;(function nx(){if(li<LOG.length){const p=document.createElement("p");p.textContent=LOG[li++];$("log").appendChild(p);setTimeout(nx,900)}else $("go0").classList.remove("hidden")})();
 $("go0").onclick=()=>go(1);
 
