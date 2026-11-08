@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Monte Cieco · Livello 4 · L’Antenna</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Bitter:wght@600;800&display=swap">
+<style>
+:root{color-scheme:light;--paper:#efe6cd;--paper2:#e3d8b6;--card:#fbf6e6;--ink:#26332a;--ink2:#5d6a5a;--green:#2f5d3a;--green2:#4d7c46;--red:#c0392b;--brown:#7a5530;--blue:#4f86a3;--gold:#d9a233;
+--hd:"Bitter",Georgia,serif;--bd:"Alegreya Sans","Trebuchet MS",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;color:var(--ink);font-family:var(--bd);font-size:18px;line-height:1.5;background-color:var(--paper);
+background-image:repeating-radial-gradient(circle at 18% 8%,transparent 0 34px,#d9cca6 34px 35.5px),repeating-radial-gradient(circle at 88% 78%,transparent 0 42px,#d9cca6 42px 43.5px)}
+header.top{background:var(--green);color:#f4ecd2;padding:10px 16px;border-bottom:5px solid var(--brown)}
+.ttl{font-family:var(--hd);font-weight:800;font-size:1.3rem;letter-spacing:.02em}.ttl small{display:block;font-family:var(--bd);font-weight:400;font-size:.8rem;opacity:.85;letter-spacing:.08em}
+.mapbar{max-width:920px;margin:0 auto;padding:6px 10px 0}
+#trail{width:100%;height:auto;display:block}
+#trail .em{font-size:20px}
+#trail text.rn{font-family:var(--hd);font-weight:800;font-size:11px;fill:var(--ink)}
+.wp.done rect:first-child{fill:#9ccc7a}
+.pulse{animation:pl 1.8s ease-out infinite;transform-box:fill-box;transform-origin:center}@keyframes pl{0%{transform:scale(.5);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+.ant{animation:an 2.4s ease-out infinite;transform-box:fill-box;transform-origin:center;opacity:0}@keyframes an{0%{transform:scale(.4);opacity:.8}100%{transform:scale(2.2);opacity:0}}
+main{max-width:760px;margin:0 auto;padding:6px 12px 60px}
+.tappa{display:none;background:var(--card);border:1px solid #cdbf93;border-left:10px solid var(--green2);border-radius:6px;padding:20px 22px 24px;box-shadow:0 12px 30px #3a2f1a30}
+.tappa.on{display:block;animation:in .6s ease-out}@keyframes in{from{opacity:0;transform:translateY(14px)}}
+h1,h2{font-family:var(--hd);font-weight:800;margin:0 0 8px;line-height:1.15}h1{font-size:1.9rem}h2{font-size:1.4rem;color:var(--green)}
+.kick{font-family:var(--hd);color:var(--red);font-size:.85rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+p{margin:.6em 0}
+.note{background:#f1e7c4;border:2px solid var(--brown);border-radius:4px;padding:12px 15px;margin:12px 0;font-size:.97rem}
+.note b{color:var(--brown)}
+.sign{display:inline-block;font-family:var(--hd);font-weight:800;font-size:.95rem;background:var(--brown);color:#fbf1d4;border:0;padding:11px 34px 11px 18px;cursor:pointer;clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%);transition:background .15s,transform .15s;text-decoration:none}
+.sign:hover{background:#946a3b;transform:translateX(3px)}.sign:disabled{opacity:.4;pointer-events:none}
+.fb{margin:12px 0;padding:10px 14px;border-left:6px solid var(--gold);background:#f6ecc8;border-radius:0 4px 4px 0;font-size:.97rem}
+.fb.g{border-color:var(--green2);background:#dcebd0}.fb.b{border-color:var(--red);background:#f2d9d1}
+.logl p{font-size:.98rem;border-left:4px solid var(--red);padding:2px 10px;margin:7px 0;animation:in .5s}
+.qh{font-family:var(--hd);font-weight:600;font-size:1.08rem;margin:16px 0 8px}
+.opt{display:block;width:100%;text-align:left;font-family:var(--bd);font-size:1rem;background:#fff9e6;color:var(--ink);border:2px solid #b8a77b;border-radius:4px;padding:10px 12px;margin:7px 0;cursor:pointer;line-height:1.35}
+.opt:hover:not(:disabled){border-color:var(--green2);background:#fff}.opt.right{background:#d5e8c8;border-color:var(--green2)}.opt.wrong{background:#f2d2c8;border-color:var(--red);opacity:.8}.opt:disabled{cursor:default}
+.opt.sel{background:#d5e8c8;border-color:var(--green2);font-weight:700}
+.label{background:#fff;border:2px dashed var(--ink2);padding:9px 13px;font-size:.88rem;margin:10px auto;max-width:330px;font-family:"Courier New",monospace;line-height:1.45}
+.phone{width:min(320px,100%);margin:14px auto;background:#f4f5f7;border:9px solid #1e1f22;border-radius:36px;overflow:hidden;box-shadow:0 18px 40px #0005;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#111;font-size:15px;line-height:1.35}
+.pst{display:flex;justify-content:space-between;padding:8px 18px 4px;font-size:.72rem;font-weight:600;background:#f4f5f7}
+.pbody{min-height:420px;padding:2px 0 14px}.ph{padding:8px 16px 8px;font-size:1.3rem;font-weight:700}
+.net{display:flex;align-items:center;gap:9px;padding:11px 16px;background:#fff;border-bottom:1px solid #e3e5e8;cursor:pointer}.net:hover{background:#eef3fb}.net b{flex:1;font-weight:600}.net small{color:#777;display:block;font-weight:400;font-size:.72rem}
+.sec{font-size:.7rem;padding:12px 16px 4px;color:#777;text-transform:uppercase;letter-spacing:.05em}
+.bars{display:inline-flex;align-items:flex-end;gap:2px;height:14px}.bars u{width:4px;background:#c9ccd1;display:block}.bars u:nth-child(1){height:4px}.bars u:nth-child(2){height:7px}.bars u:nth-child(3){height:10px}.bars u:nth-child(4){height:14px}
+.b1 u:nth-child(-n+1),.b2 u:nth-child(-n+2),.b3 u:nth-child(-n+3),.b4 u{background:#2a7de1}
+.row2{display:flex;justify-content:space-between;gap:10px;padding:10px 16px;background:#fff;border-bottom:1px solid #e3e5e8;font-size:.82rem}.row2 span:last-child{text-align:right;font-weight:600;word-break:break-all}
+.pbtn{display:block;width:calc(100% - 32px);margin:14px 16px 0;padding:11px;background:#2a7de1;color:#fff;border:0;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;font-family:inherit}
+.pbtn.gh{background:transparent;color:#2a7de1}
+.back{padding:6px 14px;color:#2a7de1;cursor:pointer;font-size:.9rem;background:none;border:0;font-family:inherit}
+.tabs{display:flex;gap:5px;padding:4px 10px 0}.tabs button{flex:1;font-family:inherit;font-size:.72rem;padding:6px 2px;border:0;background:#dfe2e7;border-radius:8px 8px 0 0;cursor:pointer;color:#333}.tabs button.on{background:#fff;font-weight:700}
+.url{margin:0 10px;padding:7px 10px;background:#fff;border-radius:0 0 10px 10px;font-size:.7rem;word-break:break-all;display:flex;gap:6px;align-items:flex-start}.url.bad{color:#b3261e}
+.pg{margin:14px 14px;background:#fff;border:1px solid #dde;border-radius:10px;padding:16px;text-align:center}.pg .fake{height:30px;border:1px solid #ccd;border-radius:6px;margin:8px 0;background:#f7f8fa;color:#889;font-size:.72rem;display:flex;align-items:center;padding-left:9px}
+.sw{display:flex;align-items:center;gap:10px;margin:10px 0;font-weight:700;cursor:pointer}.sw input{width:44px;height:24px;appearance:none;background:#b9b09a;border-radius:20px;position:relative;cursor:pointer;transition:.3s}
+.sw input::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:.3s}.sw input:checked{background:var(--green2)}.sw input:checked::after{left:23px}
+.obs{background:#1b2a20;color:#cfe7c9;font-family:"Courier New",monospace;font-size:.82rem;padding:12px 14px;border-radius:6px;min-height:200px}
+.obs div{padding:6px 0;border-bottom:1px dashed #3d5444;transition:.3s}.obs .h{color:#ffd28a}.obs .w{color:#ff9d8a}.obs .e{color:#9ad6a4}
+.bag{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}@media(max-width:520px){.bag{grid-template-columns:1fr}}
+.item{font-family:var(--bd);font-size:.97rem;text-align:left;background:#fff9e6;border:2px solid #b8a77b;border-radius:6px;padding:9px 11px;cursor:pointer;color:var(--ink);line-height:1.3}.item:hover:not(:disabled){border-color:var(--green2)}.item:disabled{background:#d5e8c8;border-color:var(--green2);cursor:default}
+.tok{font-family:inherit;font-size:inherit;background:#fff3c2;border:1px dashed var(--brown);border-radius:3px;padding:0 4px;margin:0 1px;cursor:pointer;color:inherit}.tok:hover{background:#ffe27a}.tok.ok{background:#bfe0a8;border-style:solid;border-color:var(--green2)}
+.vc{background:#fff9e6;border:2px solid #b8a77b;border-radius:6px;padding:10px 14px;margin:9px 0}.vc b{font-family:var(--hd);font-size:1.05rem}.vc ul{margin:6px 0 10px;padding-left:1.15em;font-size:.93rem}.vc li{margin:2px 0}
+.net.dis{opacity:.45}.net.dis b{text-decoration:line-through}
+.sh{animation:sh .4s}@keyframes sh{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+#packed{background:#e9dcb4;border:2px solid var(--brown);border-radius:4px;padding:8px 12px;min-height:60px;font-size:.92rem}#packed div{padding:4px 0}
+ol.les{padding-left:1.2em}ol.les li{margin:.6em 0}
+.code{font-family:var(--hd);font-weight:800;font-size:1.8rem;letter-spacing:.12em;text-align:center;border:4px double var(--red);color:var(--red);padding:10px;margin:14px 0;background:#fff9e6}
+.src{font-size:.82rem;color:var(--ink2);border-top:1px dashed #b8a77b;margin-top:14px;padding-top:8px}
+.hidden{display:none!important}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* --- tappa 2 · smonta l'indirizzo e schede --- */
+.dim{color:var(--ink2);font-size:.9rem}
+.mono{font-family:"Courier New",monospace}
+.dh{font-family:var(--hd);font-weight:700;color:var(--red);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:1px;background:#1b2a20;color:#cfe7c9;font-family:"Courier New",monospace;font-size:.95rem;padding:12px 14px;border-radius:6px;margin:10px 0;line-height:1.9}
+.chain .proto{color:#9ad6a4;opacity:.9}
+.chain .dot{color:#9ad6a4;opacity:.55}
+.segw{display:inline-flex;align-items:center}
+.segw.gone{display:none}
+.chain .seg{font-family:inherit;font-size:inherit;background:#fff3c2;color:#26332a;border:1px dashed #d9a233;border-radius:3px;padding:1px 5px;cursor:pointer;transition:background .15s}
+.chain .seg:hover{background:#ffe27a}
+.chain .seg.gone{opacity:.22;text-decoration:line-through;pointer-events:none}
+.chain .seg.owner{background:#bfe0a8;border-style:solid;border-color:var(--green2);cursor:default}
+.chain .seg.wrong{background:#f2d2c8;border-color:var(--red);animation:sh .4s}
+.chain .path{color:#9ad6a4;opacity:.8}
+.ownerline b{font-family:"Courier New",monospace;color:var(--red);word-break:break-all}
+.target{background:#e9dcb4;border:2px solid var(--brown);border-radius:4px;padding:8px 12px;font-size:.95rem;margin:10px 0}
+.target b{color:var(--brown)}
+.url{border-radius:0;word-break:normal;overflow-wrap:anywhere}
+.url .u{display:inline}
+.cmp{margin:.5em 0 0;padding-top:.4em;border-top:1px dashed #d8b3a8;font-size:.92rem}
+
+</style>
+</head>
+<body>
+<header class="top"><div class="ttl">L’Antenna<small>CIMA DI MONTE CIECO · 2.140 m</small></div></header>
+<div class="mapbar">
+<svg id="trail" viewBox="0 0 900 150" role="img" aria-label="Sentiero con le tappe del livello">
+ <g fill="none" stroke="#cbbd93" stroke-width="1.3" opacity=".9"><ellipse cx="450" cy="75" rx="400" ry="62"/><ellipse cx="450" cy="75" rx="340" ry="50"/><ellipse cx="450" cy="75" rx="270" ry="38"/><ellipse cx="150" cy="40" rx="90" ry="26"/><ellipse cx="780" cy="110" rx="100" ry="28"/></g>
+ <path id="tp" d="M40 110 C150 20 250 24 330 82 S500 140 570 72 S740 12 860 66" fill="none" stroke="#7a5530" stroke-width="4" stroke-dasharray="2 9" stroke-linecap="round"/>
+ <circle class="ant" id="antr" r="14" fill="none" stroke="#c0392b" stroke-width="2"/>
+ <g id="wps"></g>
+ <g id="hk"><circle class="pulse" r="12" fill="#c0392b"/><text class="em" text-anchor="middle" y="7">🥾</text></g>
+</svg>
+</div>
+
+<main>
+<section class="tappa on" id="t0">
+ <div class="kick">Livello 4</div>
+ <h1>L’Antenna</h1>
+ <div class="logl" id="log"></div>
+ <div class="note"><b>Di che cosa parla questo livello.</b> Quando sei fuori casa, il telefono si collega spesso a reti Wi-Fi che non conosci: bar, stazioni, alberghi. Qui impari a riconoscere una rete falsa, a controllare i siti prima di inserire una password e a capire quando serve una VPN.</div>
+ <p><button class="sign hidden" id="go0">Parti dal rifugio</button></p>
+</section>
+
+<section class="tappa" id="t1">
+ <div class="kick">Tappa 1 · La rete giusta</div>
+ <h2>Quale Wi-Fi scegliere?</h2>
+ <div class="note"><b>Cos’è il Wi-Fi.</b> È la rete senza fili a cui colleghi il telefono. Se la rete è <b>aperta</b> (senza password), tutto quello che mandi può essere letto da chi è collegato. Ogni rete ha un nome, ma <b>il nome si può copiare</b>: un truffatore crea una rete con lo stesso nome di quella vera (si chiama <b>“evil twin”</b>, gemello cattivo) e aspetta che qualcuno si colleghi.<br><b>Come si riconosce quella vera.</b> Guarda il tipo di protezione (WPA2 o WPA3 vuol dire protetta con password) e l’<b>identificativo BSSID</b>, che è come la targa del router: confrontalo con quello scritto sull’etichetta del router vero. Il segnale forte non è una prova.</div>
+ <p>Sei nella sala antenne. Sul router vero c’è questa etichetta:</p>
+ <div class="label">RETE: OSSERVATORIO_MC<br>PROTEZIONE: WPA2<br>BSSID: 4C:5E:0C:7A:21:90</div>
+ <p><b>Il tuo compito:</b> devi controllare e verificare <b>tutte</b> le reti, una per una: toccale per vedere i dettagli e <b>scarta</b> quelle sospette indicando <b>tutti</b> i motivi che valgono per ciascuna. Solo quando ne resta una sola potrai collegarti. Attenzione: alcune somigliano molto a quella vera, quindi confronta tutto <b>carattere per carattere</b>.</p>
+ <p id="dc" class="fb">Reti scartate: 0/5</p>
+ <div class="phone"><div class="pst"><span>06:12</span><span>▂▄▆ 🔋</span></div><div class="pbody" id="pw"></div></div>
+ <div id="rs"></div><div id="f1"></div><div id="q1"></div>
+</section>
+
+<section class="tappa" id="t2">
+ <div class="kick">Tappa 2 · Il sito giusto</div>
+ <h2>Dove inserisci la password?</h2>
+ <div class="note"><b>Il lucchetto.</b> Un sito che inizia con <b>http://</b> (senza lucchetto) manda i dati in chiaro: chi è nella tua stessa rete può leggerli. Con <b>https://</b> e il lucchetto, i dati sono cifrati nel viaggio. Ma attenzione: <b>il lucchetto non dice che il sito è quello giusto</b>. Un truffatore può avere https su un indirizzo falso.<br><b>Come si legge un indirizzo.</b> Il vero nome del sito è la parte che sta <b>subito prima del primo “/”</b>, letta da destra: in <i>https://login.poste.it.verifica.net/</i> il sito vero è <b>verifica.net</b>, non poste.it. Controlla lucchetto <b>e</b> indirizzo.</div>
+ <div id="dr" class="hidden"></div>
+ <div id="br" class="hidden">
+ <p>Sei collegato alla rete giusta. Devi accedere al sito dell’osservatorio, poi alla posta di Elia e infine alla sua banca. Per ogni sito hai più schede aperte: sembrano identiche, cambia solo l’indirizzo.</p>
+ <div class="note"><b>Come scegliere, senza andare a memoria.</b> In ogni turno sai <b>a cosa vuoi accedere</b>. Apri le schede e smonta l’indirizzo: il vero nome del sito sono le <b>due parole più a destra</b>, prima del primo “/”. Deve essere il nome del servizio che cerchi, non un sito che lo imita. E controlla il <b>lucchetto</b>.</div>
+ <p class="target" id="target"></p>
+ <div class="phone"><div class="pst"><span>06:14</span><span>▂▄▆ 🔋</span></div><div class="tabs" id="tabs"></div><div class="url" id="url"></div><div id="pgx"></div></div>
+</div>
+ <div id="f2"></div><div id="q2"></div>
+</section>
+
+<section class="tappa" id="t3">
+ <div class="kick">Tappa 3 · Il tunnel</div>
+ <h2>A cosa serve una VPN?</h2>
+ <div class="note"><b>Cos’è una VPN.</b> Su una rete pubblica, chi è collegato con te (o chi la gestisce) può vedere <b>a quali siti ti colleghi</b>. Una VPN (rete privata virtuale) crea un <b>tunnel cifrato</b> dal tuo telefono a un server del servizio VPN: chi sta in mezzo vede solo traffico cifrato verso quel server.<br><b>Cosa non fa:</b> non rende i siti sicuri, non ti protegge dal phishing e non ti rende invisibile: ti devi fidare di chi gestisce la VPN, che al posto della rete pubblica vede il tuo traffico.</div>
+ <p>Qui sotto c’è ciò che vede un curioso collegato alla tua stessa rete. Accendi e spegni la VPN e osserva cosa cambia.</p>
+ <label class="sw"><input type="checkbox" id="vpn"><span id="vl">VPN spenta</span></label>
+ <div class="obs" id="obs"></div>
+ <p id="vn" class="hidden"><button class="sign" id="vgo">Ho capito, alla prova</button></p>
+ <div id="sg"></div>
+ <div id="pv"></div>
+ <div id="q3"></div>
+</section>
+
+<section class="tappa" id="t4">
+ <div class="kick">Tappa 4 · Lo zaino</div>
+ <h2>Prepara lo zaino digitale</h2>
+ <p>Prima di scendere dalla cima, riempi lo zaino con le abitudini che ti proteggono in giro. Tocca gli oggetti: quelli giusti entrano nello zaino, quelli sbagliati ti spiegano perché restano fuori. Te ne servono <b>sei</b>, e alcuni oggetti sbagliati sembrano ragionevoli.</p>
+ <div class="bag" id="bag"></div>
+ <div class="fb hidden" id="bf"></div>
+ <div id="packed"><b>Nello zaino (<span id="pn">0</span>/6):</b></div>
+ <p id="bn" class="hidden"><button class="sign" id="bgo">Scendi a valle</button></p>
+</section>
+
+<section class="tappa" id="t5">
+ <div class="kick">Arrivo · Il segnale è libero</div>
+ <h2>Cosa hai imparato</h2>
+ <ol class="les">
+  <li><b>Lo stesso nome non è la stessa rete.</b> Controlla protezione e identificativo, e diffida delle reti aperte: possono essere “gemelle” false.</li>
+  <li><b>Un segnale forte non è una prova.</b> Chi vuole ingannarti può mettere il suo router vicino a te.</li>
+  <li><b>https cifra il collegamento, ma controlla l’indirizzo:</b> il lucchetto non dice che il sito è onesto.</li>
+  <li><b>La VPN</b> cifra il traffico sulle reti pubbliche e nasconde ai curiosi dove vai, ma non ti protegge dal phishing e sposta la fiducia sul fornitore.</li>
+  <li><b>Per cose importanti fuori casa:</b> usa i dati del telefono (o un hotspot personale), tieni tutto aggiornato e disattiva la connessione automatica alle reti Wi-Fi.</li>
+ </ol>
+ <div class="src">Per approfondire: ACN – Agenzia per la Cybersicurezza Nazionale (acn.gov.it), ENISA, Polizia Postale (commissariatodips.it).</div>
+ <p>Il tuo codice di sblocco per la serratura:</p>
+ <div class="code">ANTENNA-4</div>
+ <a class="sign" id="lock" href="#" target="_blank" rel="noopener">Apri la serratura</a>
+ <p id="warn" class="hidden" style="color:var(--red)">(Link del Modulo non ancora inserito)</p>
+</section>
+</main>
+
+<script>
+// ====== Link del Google Modulo del Livello 4 ======
+const FORM_URL = "https://forms.gle/6FWUq7hGh4XpKY6A8";
+// =================================================================
+const $=id=>document.getElementById(id);
+const shuf=a=>[...a].sort(()=>Math.random()-.5);
+
+/* ---------- sentiero ---------- */
+const FRAC=[.03,.2,.4,.6,.8,.97];let curF=FRAC[0],cur=0,PTS=[];
+function initTrail(){const p=$("tp"),L=p.getTotalLength();PTS=FRAC.map(f=>p.getPointAtLength(L*f));let g="";
+ PTS.forEach((q,i)=>{if(i===0)g+=`<text class="em" x="${q.x}" y="${q.y+7}" text-anchor="middle">⛺</text>`;
+  else if(i===5)g+=`<text class="em" x="${q.x}" y="${q.y+7}" text-anchor="middle">📡</text>`;
+  else g+=`<g class="wp" id="wp${i}" transform="translate(${q.x-10},${q.y-7})"><rect width="20" height="14" rx="2" fill="#fff" stroke="#26332a" stroke-width="1.5"/><rect y="4.5" width="20" height="5" fill="#c0392b"/></g><text class="rn" x="${q.x}" y="${q.y+26}" text-anchor="middle">${["","I","II","III","IV"][i]}</text>`});
+ $("wps").innerHTML=g;$("antr").setAttribute("cx",PTS[5].x);$("antr").setAttribute("cy",PTS[5].y);place(curF)}
+function place(f){const p=$("tp"),q=p.getPointAtLength(p.getTotalLength()*f);$("hk").setAttribute("transform",`translate(${q.x},${q.y-18})`)}
+function go(n){document.querySelectorAll(".tappa").forEach(t=>t.classList.remove("on"));$("t"+n).classList.add("on");
+ for(let i=1;i<n&&i<5;i++)$("wp"+i).classList.add("done");
+ const from=curF,to=FRAC[n],t0=performance.now();cur=n;
+ (function f(t){const k=Math.min(1,(t-t0)/900),e=1-Math.pow(1-k,3);curF=from+(to-from)*e;place(curF);if(k<1)requestAnimationFrame(f)})(t0);
+ scrollTo({top:0,behavior:"smooth"})}
+
+/* ---------- quiz generico ---------- */
+function quiz(el,Qs,done){let i=0;(function show(){const q=Qs[i],o=shuf(q.o);
+ el.innerHTML=`<p class="qh">${q.h}</p>`+o.map((x,k)=>`<button class="opt" data-k="${k}">${x.t}</button>`).join("")+'<div class="fb hidden"></div>';
+ el.onclick=e=>{const b=e.target.closest(".opt");if(!b||b.disabled||el.dataset.lock)return;const x=o[+b.dataset.k],fb=el.querySelector(".fb");
+  b.disabled=true;fb.classList.remove("hidden");
+  if(x.ok){el.dataset.lock=1;b.classList.add("right");fb.className="fb g";fb.innerHTML="✔ "+x.e+`<p><button class="sign" id="nq">${i<Qs.length-1?"Avanti":"Continua"}</button></p>`;
+   fb.querySelector("#nq").onclick=()=>{delete el.dataset.lock;if(i<Qs.length-1){i++;show()}else done()}}
+  else{b.classList.add("wrong");fb.className="fb b";fb.innerHTML="✖ "+x.e}}})()}
+
+/* ---------- intro ---------- */
+const LOG=["[ANTENNA] Il segnale dell’archivio arriva fin quassù.","[ELIA] Per riprenderlo devi collegarti alla rete dell’osservatorio.","[ELIA] Attenzione: qualcuno ha acceso reti che non sono mie.","[SISTEMA] Quattro tappe: la rete, il sito, il tunnel, lo zaino."];
+let li=0;(function nx(){if(li<LOG.length){const p=document.createElement("p");p.textContent=LOG[li++];$("log").appendChild(p);setTimeout(nx,900)}else $("go0").classList.remove("hidden")})();
+$("go0").onclick=()=>go(1);
+
+/* ---------- tappa 1 · Wi-Fi ---------- */
+const REASONS=["Il nome è diverso da quello sull’etichetta","La rete è aperta, senza password","Il BSSID è diverso da quello sull’etichetta","È l’hotspot personale di un telefono"];
+const NET=[
+ {n:"OSSERVATORIO_MC",sec:"WPA2 · protetta",lock:1,bars:3,bssid:"4C:5E:0C:7A:21:90",ok:1},
+ {n:"OSSERVATORIO_MC",sec:"Aperta · senza password",lock:0,bars:4,bssid:"9A:11:D3:F0:5B:EE",why:[1,2],hint:"Guarda il campo Protezione e confronta il BSSID con l’etichetta.",res:"Era la rete <b>gemella</b>: stesso nome, ma aperta e con un BSSID diverso da quello sull’etichetta. Chi l’ha creata vede tutto quello che invii. E aveva il segnale più forte proprio perché il truffatore ha messo il suo router vicino a te."},
+ {n:"OSSERVATORIO_MC",sec:"WPA2 · protetta",lock:1,bars:4,bssid:"4C:5E:0C:7A:21:09",why:[2],hint:"Il nome e la protezione sono uguali alla rete vera: cosa cambia?",res:"Sembrava perfetta: stesso nome e stessa protezione. Ma il BSSID è <b>4C:5E:0C:7A:21:09</b>, mentre sull’etichetta è <b>4C:5E:0C:7A:21:90</b>: due cifre scambiate. È una gemella con password. Per questo il BSSID va confrontato carattere per carattere."},
+ {n:"OSSERVATORIO-MC",sec:"WPA2 · protetta",lock:1,bars:2,bssid:"B8:27:EB:19:A0:44",why:[0,2],hint:"Leggi con attenzione il nome e il BSSID.",res:"Il nome è <b>OSSERVATORIO-MC</b> (con il trattino) e non OSSERVATORIO_MC: un nome quasi uguale, fatto per ingannare chi guarda in fretta. Anche il BSSID è diverso da quello dell’etichetta."},
+ {n:"Rifugio_Free_WiFi",sec:"Aperta · senza password",lock:0,bars:2,bssid:"02:AA:1B:33:C4:07",why:[0,1,2],hint:"Confronta nome, protezione e BSSID con l’etichetta.",res:"Una rete aperta di sconosciuti: nessuna cifratura e non sai chi la gestisce. Anche il nome e il BSSID sono diversi da quelli dell’osservatorio. Non è la rete che ti serve."},
+ {n:"Telefono_di_Elia",sec:"WPA2 · protetta",lock:1,bars:1,bssid:"C2:7F:44:19:8D:A3",why:[0,2,3],hint:"Guarda il nome, il BSSID e di chi è davvero il telefono.",res:"Il nome dice che è il telefono di Elia, ma il nome è solo un’etichetta: non puoi verificarlo. Il BSSID non è quello dell’osservatorio e un hotspot personale non è la rete che ti serve. Non collegarti a reti di cui non sei sicuro."}];
+const order1=shuf([0,1,2,3,4,5]),disc=new Set();
+function wlist(){$("pw").innerHTML='<div class="ph">Wi-Fi</div><div class="sec">Reti disponibili</div>'+order1.map(i=>{const x=NET[i],d=disc.has(i);return `<div class="net${d?" dis":""}" data-i="${i}"><b>${x.n}<small>${d?"scartata":x.sec}</small></b>${x.lock?"🔒":""}<i class="bars b${x.bars}"><u></u><u></u><u></u><u></u></i></div>`}).join("")}
+$("pw").onclick=e=>{const n=e.target.closest(".net");if(n)wdet(+n.dataset.i)};
+function wdet(i){const x=NET[i];$("pw").innerHTML=`<button class="back" id="wb">‹ Wi-Fi</button><div class="ph">${x.n}</div>
+ <div class="row2"><span>Protezione</span><span>${x.sec}</span></div><div class="row2"><span>Intensità segnale</span><span>${x.bars} su 4</span></div><div class="row2"><span>BSSID</span><span>${x.bssid}</span></div>
+ <button class="pbtn" id="wc">Collegati</button><button class="pbtn gh" id="wd">Scarta questa rete</button><button class="pbtn gh" id="wb2">Indietro</button>`;
+ $("wb").onclick=$("wb2").onclick=wlist;$("wc").onclick=()=>wconn(i);$("wd").onclick=()=>discard(i)}
+function discard(i){const x=NET[i];
+ if(x.ok){$("f1").innerHTML='<div class="fb b">✖ Questa è proprio la rete vera: nome, protezione e BSSID coincidono con l’etichetta. Non va scartata.</div>';return}
+ if(disc.has(i)){$("f1").innerHTML='<div class="fb">Hai già scartato questa rete.</div>';return}
+ $("f1").innerHTML="";
+ const sel=new Set();
+ const draw=()=>{
+  $("rs").innerHTML='<p><b>Perché scarti “'+x.n+'”?</b> Tocca <b>tutti</b> i motivi che valgono per questa rete, poi conferma.</p>'
+   +REASONS.map((r,k)=>`<button class="opt${sel.has(k)?" sel":""}" data-k="${k}">${sel.has(k)?"✓ ":""}${r}</button>`).join("")
+   +'<p><button class="sign" id="rc">Conferma i motivi</button></p>';
+ };
+ draw();
+ $("rs").onclick=e=>{
+  const b=e.target.closest(".opt");
+  if(b){const k=+b.dataset.k;if(sel.has(k))sel.delete(k);else sel.add(k);draw();return}
+  if(!e.target.closest("#rc"))return;
+  const missing=x.why.filter(k=>!sel.has(k));
+  const extra=[...sel].filter(k=>!x.why.includes(k));
+  if(!missing.length&&!extra.length){
+   disc.add(i);$("rs").innerHTML="";$("dc").textContent="Reti scartate: "+disc.size+"/5";
+   $("f1").innerHTML=`<div class="fb g">✔ Rete scartata. ${x.res} ${disc.size<5?"Ne restano "+(5-disc.size)+" da controllare.":"Hai verificato tutte le reti: ne resta una sola. Controllala e collegati."}</div>`;wlist();return}
+  let msg="";
+  if(extra.length)msg+=`Il motivo <b>“${extra.map(k=>REASONS[k]).join("” e “")}”</b> non ${extra.length>1?"valgono":"vale"} per questa rete. `;
+  if(missing.length)msg+=`Manca almeno un motivo giusto. `;
+  msg+=x.hint;
+  $("f1").innerHTML=`<div class="fb b">✖ ${msg}</div>`;
+ };
+}
+function wconn(i){const x=NET[i];
+ if(x.ok){
+  if(disc.size<5){$("f1").innerHTML=`<div class="fb">Prima di fidarti, verifica tutte le altre reti: te ne restano ${5-disc.size} da scartare, spiegando perché.</div>`;return}
+  $("rs").innerHTML="";$("pw").innerHTML='<div class="ph">Wi-Fi</div><div class="row2"><span>✔ Collegato a</span><span>OSSERVATORIO_MC</span></div>';
+  $("f1").innerHTML='<div class="fb g">✔ Giusto. Nome, protezione WPA2 e BSSID corrispondono all’etichetta del router vero.</div>';
+  quiz($("q1"),[
+   {h:"Perché una rete con lo stesso nome della tua, ma senza password, è sospetta?",o:[
+    {t:"Perché il nome si può copiare: una rete “gemella” aperta serve a far collegare le persone e a spiare quello che inviano.",ok:1,e:"Esatto. Per questo il nome da solo non basta: si guarda anche la protezione e il BSSID."},
+    {t:"Perché le reti aperte sono sempre più lente.",e:"La velocità non c’entra: il problema è che chi le gestisce può leggere ciò che passa."},
+    {t:"Perché due reti non possono avere lo stesso nome.",e:"Possono: il nome è solo un’etichetta che chiunque può scegliere."}]},
+   {h:"Una delle reti ha il segnale più forte di tutte. È quindi la migliore?",o:[
+    {t:"No: chi vuole ingannarti può mettere il suo router vicino a te per avere più segnale.",ok:1,e:"Esatto. Il segnale dice solo quanto è vicino il router, non quanto è sicura la rete."},
+    {t:"Sì, un segnale forte significa una rete più sicura.",e:"Sicurezza e potenza del segnale sono due cose diverse."},
+    {t:"Sì, ma solo se la rete ha un nome conosciuto.",e:"Il nome si può copiare, come hai visto."}]},
+   {h:"Una rete gemella aveva stesso nome e stessa protezione della vera. Cosa l’ha tradita?",o:[
+    {t:"Il BSSID: due cifre diverse da quello sull’etichetta del router vero.",ok:1,e:"Esatto. È il motivo per cui si confronta il BSSID carattere per carattere. E la cosa più sicura resta chiedere a chi gestisce il locale."},
+    {t:"Il numero di barre del segnale.",e:"Le barre dicono quanto è vicina la rete, non se è quella vera."},
+    {t:"Il colore dell’icona.",e:"Non esiste un colore che distingua le reti vere da quelle false."}]}
+  ],()=>go(2));$("dr").classList.remove("hidden");drill()}
+ else{$("pw").innerHTML=`<div class="ph">Wi-Fi</div><div class="row2"><span>⚠ Collegato a</span><span>${x.n}</span></div>`;
+  $("f1").innerHTML=`<div class="fb b">✖ ${x.res}</div><p><button class="sign" id="rt">Riprova</button></p>`;
+  $("rt").onclick=()=>{$("f1").innerHTML="";wlist()}}}
+wlist();
+
+/* ---------- tappa 2 · browser ---------- */
+
+function domainOf(u){
+ const m=u.match(/^https?:\/\/([^/]+)/i);
+ if(!m)return u;
+ const L=m[1].split(".");
+ return L.slice(-2).join(".");
+}
+function drill(){
+ let k=0;
+ const URLS=[
+  {proto:"https://",labels:["login","poste","it","verifica-dati","net"],path:"/accesso",owner:"verifica-dati.net",claim:"Poste"},
+  {proto:"https://",labels:["www","agenziaentrate","gov","it","rimborsi-online","net"],path:"/ritira",owner:"rimborsi-online.net",claim:"l'Agenzia delle Entrate"},
+  {proto:"https://",labels:["area-clienti","intesasanpaolo","com","verifica-accesso","it"],path:"",owner:"verifica-accesso.it",claim:"Intesa Sanpaolo"},
+  {proto:"http://",labels:["www","inps","it","servizi-spid","com"],path:"/login",owner:"servizi-spid.com",claim:"l'INPS"}
+ ];
+ const show=()=>{
+  const it=URLS[k],n=it.labels.length;
+  $("dr").innerHTML=`<div class="dh">Sala degli indirizzi · ${k+1}/${URLS.length}</div>
+   <p><b>Smonta l'indirizzo.</b> Il vero nome del sito sono le <b>due parole più a destra</b>: la fine (<span class="mono">.it</span>, <span class="mono">.com</span>, <span class="mono">.net</span>) e quella subito prima. Tocca tutte le altre parole per buttarle via. Il pezzo dopo la barra è solo il percorso: dice quale pagina, non chi possiede il sito.</p>
+   <div class="chain" id="chain"><span class="proto">${it.proto}</span>${it.labels.map((w,i)=>`<span class="segw" data-w="${i}">${i?'<span class="dot">.</span>':''}<button type="button" class="seg" data-i="${i}">${w}</button></span>`).join("")}<span class="path">${it.path}</span></div>
+   <p class="ownerline">Cosa resta: <b id="own">${it.proto}${it.labels.join(".")}${it.path}</b></p>
+   <div id="df"></div>`;
+  delete $("dr").dataset.lock;
+  $("chain").onclick=e=>{
+   const b=e.target.closest(".seg");
+   if(!b||b.classList.contains("gone")||b.classList.contains("owner")||$("dr").dataset.lock)return;
+   const i=+b.dataset.i;
+   if(i>=n-2){
+    b.classList.add("wrong");setTimeout(()=>b.classList.remove("wrong"),500);
+    $("df").innerHTML=`<div class="fb b">✖ No: «${it.labels[i]}» fa parte del nome vero. Il nome sono le due parole più a destra.</div>`;
+    return;
+   }
+   b.classList.add("gone");b.closest(".segw").classList.add("gone");
+   const vis=[...$("chain").querySelectorAll(".segw")].filter(x=>!x.classList.contains("gone"));
+   vis.forEach((x,j)=>{const dt=x.querySelector(".dot");if(dt)dt.style.visibility=j===0?"hidden":""});
+   $("df").innerHTML=`<div class="fb">«${it.labels[i]}» è un pezzo messo davanti: non è chi possiede il sito. Continua.</div>`;
+   const left=it.labels.filter((_,j)=>!$("chain").querySelector('.seg[data-i="'+j+'"]').classList.contains("gone"));
+   $("own").textContent=it.proto+left.join(".")+it.path;
+   if(left.length===2){
+    $("dr").dataset.lock="1";
+    $("chain").querySelectorAll(".seg").forEach(el=>{if(+el.dataset.i>=n-2)el.classList.add("owner")});
+    $("df").innerHTML=`<div class="fb g">✔ Il vero nome è <b>${it.owner}</b>. Tutto il resto è un pezzo aggiunto per farlo passare per ${it.claim}. La password andrebbe a <b>${it.owner}</b>, non a ${it.claim}.<p><button class="sign" id="nxd">${k<URLS.length-1?"Prossimo indirizzo":"Vai alle schede"}</button></p></div>`;
+    $("nxd").onclick=()=>{if(k<URLS.length-1){k++;show();scrollTo({top:0,behavior:"smooth"})}else{$("dr").classList.add("hidden");$("br").classList.remove("hidden");initBrowser()}};
+   }
+  };
+ };
+ show();
+}
+
+const ROUNDS=[
+ {t:"Osservatorio · Accedi",want:"osservatorio-mc.it",goal:"accedere al sito dell’osservatorio",what:"dell’osservatorio",u:"Nome utente: e.marchetti",b:"Accedi all’osservatorio",next:"Vai alla posta di Elia",okm:"Il vero nome del sito è <b>osservatorio-mc.it</b>: è il sito dell’osservatorio, e il lucchetto c’è.",sites:[
+  {u:"http://login.osservatorio-mc.it",lock:0,res:"L’indirizzo sembra quello dell’osservatorio, ma manca il lucchetto (http): la password viaggerebbe in chiaro e chi è nella tua rete potrebbe leggerla."},
+  {u:"https://login.osservatorio-mc.it.accesso-sicuro.net",lock:1,res:"Ha il lucchetto, ma il vero nome del sito è <b>accesso-sicuro.net</b>: il pezzo “osservatorio-mc.it” è messo davanti solo per imitare l’osservatorio."},
+  {u:"https://osservatorio-mc.accesso-riservato.com",lock:1,res:"Ha il lucchetto, ma il vero nome del sito è <b>accesso-riservato.com</b>: non è il sito dell’osservatorio, anche se il suo nome compare all’inizio."},
+  {u:"https://login.osservatorio-mc.it",lock:1,ok:1}]},
+ {t:"Poste · Accedi",want:"poste.it",goal:"leggere la posta di Elia",what:"della posta",u:"Codice cliente: ••••••",b:"Accedi alla posta",next:"Vai alla banca di Elia",okm:"Il vero nome del sito è <b>poste.it</b>: è il sito della posta, e il lucchetto c’è.",sites:[
+  {u:"https://www.poste.it",lock:1,ok:1},
+  {u:"https://www.poste.it.area-clienti.net",lock:1,res:"Ha il lucchetto e contiene “poste.it”, ma il vero nome del sito è <b>area-clienti.net</b>: il resto è un’etichetta messa davanti per ingannare."},
+  {u:"http://www.poste.it",lock:0,res:"Il nome del sito è giusto, ma manca il lucchetto (http): i dati viaggerebbero in chiaro. Su una rete pubblica non si inserisce una password così."},
+  {u:"https://www.posteitaliane-clienti.com",lock:1,res:"Ha il lucchetto, ma il vero nome del sito è <b>posteitaliane-clienti.com</b>: somiglia al nome della posta, ma è un sito diverso."}]},
+ {t:"Intesa Sanpaolo · Accedi",want:"intesasanpaolo.com",goal:"entrare nella banca di Elia",what:"della banca",u:"Codice utente: ••••••",b:"Accedi alla banca",okm:"Il vero nome del sito è <b>intesasanpaolo.com</b>: è il sito della banca, e il lucchetto c’è.",sites:[
+  {u:"https://www.intesasanpaolo.com",lock:1,ok:1},
+  {u:"https://intesasanpaolo.com.verifica-accesso.it",lock:1,res:"Contiene “intesasanpaolo.com”, ma il vero nome del sito è <b>verifica-accesso.it</b>: il resto è messo davanti per ingannare."},
+  {u:"https://www.intesa-sanpaolo.com",lock:1,res:"C’è un <b>trattino</b> in più: il vero nome del sito è <b>intesa-sanpaolo.com</b>, che è un altro sito."},
+  {u:"http://www.intesasanpaolo.com",lock:0,res:"Il nome del sito è giusto, ma manca il lucchetto (http): la connessione non è cifrata."}]}];
+let rd=0,order2=[],sel2=0;
+function initBrowser(){rd=0;startRound()}
+function startRound(){order2=shuf(ROUNDS[rd].sites.map((_,i)=>i));sel2=0;
+ const R0=ROUNDS[rd];
+ $("target").innerHTML=`<b>Turno ${rd+1} di ${ROUNDS.length}.</b> Obiettivo: ${R0.goal}. Scegli la scheda giusta: il vero nome del sito deve essere quello del servizio che cerchi, e ci deve essere il lucchetto.`;
+ $("f2").innerHTML=rd?`<div class="fb">Turno ${rd+1} di ${ROUNDS.length}: ${rd===1?"ora devi leggere la posta di Elia":"ora devi entrare nella banca di Elia"}. Stesso metodo: smonta l’indirizzo e controlla il lucchetto.</div>`:"";bt()}
+function bt(){const R=ROUNDS[rd];$("tabs").innerHTML=order2.map((_,k)=>`<button data-k="${k}" class="${k===sel2?"on":""}">${k+1}</button>`).join("");
+ const s=R.sites[order2[sel2]];
+ $("url").className="url"+(s.lock?"":" bad");
+ $("url").innerHTML=(s.lock?"🔒":"🔓 Non sicuro ·")+' <span class="u">'+s.u+'</span>';
+ $("pgx").innerHTML=`<div class="pg"><b>${R.t}</b><div class="fake">${R.u}</div><div class="fake">Password: ••••••••••</div><button class="pbtn" id="lg" style="margin:10px 0 0;width:100%">${R.b}</button></div>`;
+ $("lg").onclick=()=>login(order2[sel2])}
+$("tabs").onclick=e=>{const b=e.target.closest("button");if(!b)return;sel2=+b.dataset.k;bt()};
+function login(i){const R=ROUNDS[rd],s=R.sites[i];
+ if(s.ok){$("pgx").querySelector("#lg").disabled=true;
+  if(R.next){$("f2").innerHTML=`<div class="fb g">✔ Giusto. ${R.okm}<p><button class="sign" id="r2">${R.next}</button></p></div>`;$("r2").onclick=()=>{rd++;startRound()};return}
+  $("f2").innerHTML=`<div class="fb g">✔ Giusto. ${R.okm}</div>`;
+  quiz($("q2"),[
+   {h:"Il lucchetto accanto all’indirizzo significa che il sito è onesto?",o:[
+    {t:"No: significa solo che il collegamento è cifrato. Anche un sito truffa può averlo.",ok:1,e:"Esatto. Quasi tutte le schede sbagliate avevano il lucchetto."},
+    {t:"Sì: se c’è il lucchetto, il sito è affidabile.",e:"No, come hai appena visto: i truffatori ottengono il lucchetto anche per i loro siti."},
+    {t:"Sì, ma solo se il sito è famoso.",e:"Anche i siti famosi vengono copiati. Conta l’indirizzo esatto."}]},
+   {h:"Un sito inizia con http:// e non ha il lucchetto. Cosa succede ai dati che scrivi?",o:[
+    {t:"Viaggiano in chiaro: chi è nella tua stessa rete può leggerli.",ok:1,e:"Esatto. Per questo su una rete pubblica non si inseriscono password in siti senza lucchetto."},
+    {t:"Niente, sono comunque cifrati.",e:"La cifratura c’è solo con https."},
+    {t:"Il sito li cancella subito.",e:"Il problema è il viaggio dei dati, prima che arrivino al sito."}]}
+  ],()=>go(3));return}
+ const dom=domainOf(s.u),same=dom===R.want;
+ const cmp=same?"":`<p class="cmp">Il resto dell’indirizzo, davanti al nome vero, è solo un’etichetta per imitare il servizio.</p>`;
+ $("f2").innerHTML=`<div class="fb b">✖ ${s.res}${cmp}</div>`;
+ bt()}
+
+/* ---------- tappa 3 · VPN ---------- */
+const OBS={off:[["h","Un curioso sulla tua rete vede:"],["e","poste.it  🔒 (https) → si vede solo il nome del sito"],["e","mail-elia.it  🔒 (https) → si vede solo il nome del sito"],["w","meteo-vetta.it  ⚠ (http) → si legge anche il contenuto della pagina"],["w","archivio-vecchio.osservatorio-mc.it  ⚠ (http) → si leggono nome utente e password"]],
+ on:[["h","Un curioso sulla tua rete vede:"],["e","🔒 dati cifrati → vpn.esempio.net"],["e","🔒 dati cifrati → vpn.esempio.net"],["e","🔒 dati cifrati → vpn.esempio.net"],["e","🔒 dati cifrati → vpn.esempio.net"],["h","Non capisce a quali siti vai né cosa scrivi."]]};
+const seen={off:true,on:false};
+function obs(on){$("obs").innerHTML=OBS[on?"on":"off"].map(l=>`<div class="${l[0]}">${l[1]}</div>`).join("");$("vl").textContent=on?"VPN accesa":"VPN spenta";seen[on?"on":"off"]=true;if(seen.on&&seen.off)$("vn").classList.remove("hidden")}
+$("vpn").onchange=e=>obs(e.target.checked);obs(false);
+const SIT=[
+ {t:"Sei nella sala d’attesa di un aeroporto: rete aperta, senza password. Devi leggere la posta.",a:1,e:"Rete aperta e sconosciuta: ciò che passa può essere osservato. La VPN cifra il traffico."},
+ {t:"Usi l’hotspot personale del tuo telefono.",a:0,e:"È la tua connessione, gestita da te: qui la VPN aggiunge poco."},
+ {t:"Sei a casa, sul Wi-Fi protetto con la password che hai scelto tu.",a:0,e:"Rete tua e protetta: la VPN non è necessaria per stare tranquilli."},
+ {t:"Il bar ti dà la password del Wi-Fi sullo scontrino: è la stessa per tutti i clienti.",a:1,e:"Ha una password, ma la conoscono tutti i clienti: sulla rete ci sono molti sconosciuti. La VPN aiuta."},
+ {t:"Vuoi essere sicuro che un sito truffa non ti rubi la password.",a:0,e:"La VPN non riconosce i siti falsi: qui servono attenzione e controllo dell’indirizzo."}];
+const VPNS=[
+ {n:"SuperFree VPN",d:["Gratis e illimitata","Sviluppatore: sconosciuto","Permessi: contatti, SMS, posizione","Guadagna con pubblicità e vendendo “dati anonimi di navigazione”"],e:"Gratis non vuol dire senza prezzo: se non paghi, il prodotto sono i tuoi dati. E una VPN non ha bisogno di contatti e SMS."},
+ {n:"ShieldNet",d:["Abbonamento: 4 € al mese","Società con sede e contatti dichiarati","Non conserva i registri di navigazione (spiegato nella privacy policy)","Controllo indipendente pubblicato","Permessi: solo la rete"],ok:1,e:"Società riconoscibile, modello di guadagno chiaro, privacy spiegata, controllo indipendente e permessi minimi: sono i segnali da cercare."},
+ {n:"TurboVPN Gratis",d:["Gratis","Nessun sito ufficiale della società","Recensioni tutte da 5 stelle, scritte nello stesso giorno","Permessi: solo la rete"],e:"Recensioni false e società introvabile: non sai chi vedrà il tuo traffico."},
+ {n:"BrowseSafe",d:["Gratis, con piano a pagamento","Nessuna informazione sulla società","La privacy policy dice che i dati possono essere condivisi con “partner”","Permessi: solo la rete"],e:"“Partner” non meglio specificati significano che i tuoi dati possono finire a terzi."},
+ {n:"ReteSicura Plus",d:["Abbonamento: 3 € al mese","Società nota, con sito e contatti","Controllo indipendente pubblicato","Permessi: lettura di SMS e contatti"],e:"Società seria, ma chiede permessi che una VPN non dovrebbe avere: leggere SMS e contatti non serve a cifrare il traffico."}];
+function provider(){
+ $("pv").innerHTML=`<div class="note"><b>Scegliere il fornitore.</b> Con una VPN ti affidi a chi la gestisce. Controlla: chi c’è dietro, come guadagna (se è gratis, chiediti perché), cosa promette sulla privacy, se esiste un controllo indipendente e quali permessi chiede (una VPN non ha bisogno dei tuoi contatti).</div><p><b>Ultima prova.</b> Nello store ci sono cinque app VPN. Quale installi sul telefono di Elia?</p>`+shuf(VPNS).map(v=>`<div class="vc"><b>${v.n}</b><ul>${v.d.map(x=>"<li>"+x+"</li>").join("")}</ul><button class="sign" data-n="${v.n}">Installa</button><div class="vx"></div></div>`).join("")+'<div id="pq"></div>';
+ $("pv").onclick=e=>{const b=e.target.closest("button.sign");if(!b||b.dataset.n===undefined)return;const v=VPNS.find(x=>x.n===b.dataset.n),box=b.closest(".vc"),x=box.querySelector(".vx");
+  if(v.ok){$("pv").onclick=null;x.innerHTML='<div class="fb g">✔ '+v.e+'</div>';box.querySelectorAll("button").forEach(k=>k.disabled=true);
+   quiz($("pq"),[{h:"Con la VPN accesa, cosa vede chi spia la rete pubblica?",o:[
+    {t:"Solo traffico cifrato verso il server della VPN: non capisce a quali siti vai.",ok:1,e:"Esatto. Il tunnel nasconde ai curiosi la destinazione e il contenuto."},
+    {t:"Tutto come prima.",e:"Con la VPN i siti non si leggono più: tutto passa dentro il tunnel cifrato."},
+    {t:"Niente: la rete si spegne.",e:"La rete funziona: cambia solo che il traffico è cifrato."}]}],()=>go(4))}
+  else{x.innerHTML='<div class="fb b">✖ '+v.e+'</div>';b.disabled=true}}}
+$("vgo").onclick=()=>{$("vgo").disabled=true;const done=SIT.map(()=>false);
+ $("sg").innerHTML='<p><b>Prova: serve la VPN?</b> Per ogni situazione decidi se la VPN è utile.</p>'+SIT.map((x,i)=>`<div class="fb" id="si${i}">${x.t}<div style="margin-top:6px"><button class="opt" style="display:inline-block;width:auto;padding:6px 14px" data-i="${i}" data-a="1">Sì, serve</button> <button class="opt" style="display:inline-block;width:auto;padding:6px 14px" data-i="${i}" data-a="0">No, non serve o non basta</button></div><div class="ex"></div></div>`).join("");
+ $("sg").onclick=e=>{const b=e.target.closest("button.opt");if(!b)return;const i=+b.dataset.i;if(done[i])return;const x=SIT[i],box=$("si"+i),ex=box.querySelector(".ex");
+  if(+b.dataset.a===x.a){done[i]=true;box.className="fb g";ex.innerHTML="✔ "+x.e;box.querySelectorAll("button").forEach(k=>k.disabled=true);
+   if(done.every(Boolean)){$("sg").onclick=null;provider()}}
+  else{box.className="fb b";ex.innerHTML="✖ Non proprio. Rifletti: la rete è tua e protetta, oppure ci sono sconosciuti collegati? Riprova."}}};
+
+/* ---------- tappa 4 · zaino ---------- */
+const BAG=[
+ {t:"📶 Disattivare la connessione automatica alle reti Wi-Fi",ok:1,e:"Il telefono si collega da solo a reti con nomi già usati: una rete gemella lo ingannerebbe senza che tu te ne accorga."},
+ {t:"📱 Usare i dati del telefono (o un hotspot personale) per le operazioni importanti",ok:1,e:"Il traffico passa dalla tua connessione, non da una rete pubblica sconosciuta."},
+ {t:"🔄 Tenere aggiornati telefono e app",ok:1,e:"Gli aggiornamenti correggono i difetti che gli attaccanti sfruttano."},
+ {t:"🔒 Controllare lucchetto e indirizzo prima di inserire una password",ok:1,e:"Il lucchetto cifra il collegamento, l’indirizzo dice se il sito è quello giusto: servono tutte e due."},
+ {t:"🛡️ Usare una VPN di un fornitore affidabile sulle reti pubbliche",ok:1,e:"Cifra il traffico dal tuo telefono fino al server della VPN."},
+ {t:"🔕 Spegnere Wi-Fi e Bluetooth quando non servono",ok:1,e:"Meno connessioni aperte, meno occasioni per reti gemelle e collegamenti indesiderati."},
+ {t:"📡 Fidarmi di una rete perché ha un nome che conosco",e:"Il nome si può copiare: servono protezione e BSSID giusti."},
+ {t:"🏦 Fare operazioni bancarie sul Wi-Fi gratuito dell’aeroporto, tanto c’è il lucchetto",e:"Il lucchetto aiuta, ma su una rete sconosciuta basta un errore (un indirizzo falso, un avviso ignorato) per rischiare molto. Per le operazioni importanti meglio i dati del telefono."},
+ {t:"⚠️ Premere “Continua comunque” sugli avvisi del browser quando ho fretta",e:"Quegli avvisi segnalano siti o certificati sospetti: ignorarli è come passare con il semaforo rosso."},
+ {t:"🆓 Installare la prima VPN gratuita che trovo, tanto è meglio di niente",e:"Una VPN sconosciuta vede tutto il tuo traffico: può essere peggio della rete pubblica. Conta l’affidabilità."}];
+let packed=0;
+$("bag").innerHTML=shuf(BAG).map((b,i)=>`<button class="item" data-i="${BAG.indexOf(b)}">${b.t}</button>`).join("");
+$("bag").onclick=e=>{const b=e.target.closest(".item");if(!b||b.disabled)return;const x=BAG[+b.dataset.i],f=$("bf");f.classList.remove("hidden");
+ if(x.ok){b.disabled=true;packed++;$("pn").textContent=packed;const d=document.createElement("div");d.innerHTML="✔ "+x.t;$("packed").appendChild(d);f.className="fb g";f.innerHTML="✔ "+x.e;
+  if(packed===6){$("bn").classList.remove("hidden");f.innerHTML+="<br><b>Zaino completo!</b>"}}
+ else{b.classList.add("sh");setTimeout(()=>b.classList.remove("sh"),400);f.className="fb b";f.innerHTML="✖ Resta fuori dallo zaino. "+x.e}};
+$("bgo").onclick=()=>go(5);
+
+if(FORM_URL.startsWith("http"))$("lock").href=FORM_URL;else{$("warn").classList.remove("hidden");$("lock").onclick=e=>e.preventDefault()}
+initTrail();
+</script>
+</body>
+</html>
